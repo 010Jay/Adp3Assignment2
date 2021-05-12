@@ -14,47 +14,47 @@ import java.util.*;
 class CollectionTest {
 
     //Attributes
-        Collection<String> dogCollection;
+        Collection<String> dogCollection = new HashSet<>();
 
     @BeforeEach
     void setUp() {
 
-        //Initialize
-            dogCollection = new HashSet<>();
-
         //Add method | add 3 dogs to the interface
             dogCollection.add("Mika");
             dogCollection.add("Bimbis");
-            dogCollection.add("Whitey");
+            dogCollection.add("Hulk");
     }
 
     @Test
     public void testAdd()
     {
         int size = dogCollection.size();
-        assertEquals(3, size); //Expect 3 elements
 
         System.out.println(dogCollection);
+
+        assertEquals(3, size); //Expect 3 elements
     }
 
     @Test
     public void testRemove()
     {
-        //Remove method | remove dog 3
-            dogCollection.remove("Whitey");
+        //Remove method | remove dog 3 "Hulk"
+            dogCollection.remove("Hulk");
 
         int size = dogCollection.size();
-        assertEquals(2, size); //Expect 2 elements
 
         System.out.println(dogCollection);
+
+        assertEquals(2, size); //Expect 2 elements
     }
 
     @Test
     public void testFind()
     {
-        String source = "Mika"; //Element to be check if it does exist in the dogCollecton.
+        String source = "Mika"; //Element(Dog) to be check if it does exist in the dogCollecton.
+        boolean found = dogCollection.contains(source);
 
-        if(dogCollection.contains(source))
+        if(found)
         {
             System.out.println("Your dog " + source + " does exist in the dogCollection.");
         }
@@ -62,6 +62,8 @@ class CollectionTest {
         {
             System.out.println("Your dog " + source + " does not exist in the dogCollection.");
         }
+
+        assertTrue(found);
     }
 
 }
