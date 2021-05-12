@@ -32,7 +32,7 @@ class CollectionTest {
 
         System.out.println(dogCollection);
 
-        assertEquals(3, size); //Expect 3 elements
+        assertEquals(3, size); //Expects 3 elements
     }
 
     @Test
@@ -45,7 +45,7 @@ class CollectionTest {
 
         System.out.println(dogCollection);
 
-        assertEquals(2, size); //Expect 2 elements
+        assertEquals(2, size); //Expects 2 elements
     }
 
     @Test
@@ -63,7 +63,6 @@ class CollectionTest {
             System.out.println("Your dog " + source + " does not exist in the dogCollection.");
         }
 
-        assertTrue(found);
+        assertTrue(found); //Expects true;
     }
-
 }

@@ -35,7 +35,7 @@ public class MapTest {
             System.out.println(personMap.get(i));
         }
 
-        assertEquals(3, size); //Expect 3 elements
+        assertEquals(3, size); //Expects 3 elements
     }
 
     @Test
@@ -51,13 +51,13 @@ public class MapTest {
             System.out.println(personMap.get(i));
         }
 
-        assertEquals(2, size);
+        assertEquals(2, size); //Expects 2 elements
     }
 
     @Test
     public void testFind()
     {
-        String source = "Jon";
+        String source = "Jon"; //Element(Jon) to be check if it does exist in the personMap.
         boolean found = personMap.containsValue(source);
 
         if(found)
@@ -69,6 +69,6 @@ public class MapTest {
             System.out.println("The name " + source + " does not exist in the personMap.");
         }
 
-        assertTrue( found);
+        assertTrue( found); //Expects true;
     }
 }
